@@ -1,0 +1,29 @@
+appId: app.lumen.study
+productName: Lumen
+directories:
+  output: release
+  buildResources: build
+files:
+  - main.js
+  - preload.js
+  - package.json
+extraResources:
+  - from: ../web/dist
+    to: web-dist
+  - from: ../server/src
+    to: server/src
+  - from: ../../node_modules
+    to: server-node_modules
+    filter:
+      - .pnpm/**/*
+      - .modules.yaml
+  - from: ../server/node_modules
+    to: server/node_modules
+win:
+  target:
+    - nsis
+  artifactName: Lumen-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false

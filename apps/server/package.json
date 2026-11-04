@@ -1,0 +1,21 @@
+{
+  "name": "@lumen/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-transform-types src/main.ts",
+    "dev": "node --experimental-transform-types --watch --watch-path=src src/main.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.0",
+    "@lumen/shared": "workspace:*",
+    "@napi-rs/canvas": "1.1.0",
+    "hono": "^4.7.0",
+    "mammoth": "^1.8.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "4.10.38",
+    "tesseract.js": "^5.1.1",
+    "zod": "^3.24.2"
+  }
+}
